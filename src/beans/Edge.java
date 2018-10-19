@@ -1,10 +1,10 @@
 package beans;
 public class Edge {
-	//DestinationVertexIndex
+	//Destination Vertex Index
 	private Integer destination;
-	//distance of road
+	//Distance of road
 	private Double distance;
-	//vehicles per unit time
+	//Vehicles per unit time
 	private Double traffic;
 
 	public Integer getDestination() {

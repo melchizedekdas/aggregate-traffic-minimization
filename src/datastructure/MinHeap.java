@@ -5,12 +5,19 @@ import java.util.List;
 
 import beans.AugmentedVertex;
 
+//Min-heap which facilitates fast heapify after change key operation
 public class MinHeap {
+	
+	//Size of the heap
 	int size=0;
+	
+	//ArrayList storing the heap in memory
 	List<AugmentedVertex> list=new ArrayList<AugmentedVertex>();
+	
 	public boolean isEmpty() {
 		return size==0;
 	}
+	
 	public void insert(AugmentedVertex node) {
 		if(size<list.size()) {
 			list.set(size, node);
@@ -33,6 +40,8 @@ public class MinHeap {
 		heapify(list.get(0));
 		return node;
 	}
+	
+	//Heapify the node using the array index of the node in the heap. O(log n)
 	public void heapify(AugmentedVertex node) {
 		int index=node.getMinHeapIndex();
 		while((index>1) && (list.get(index/2-1).getValue()>node.getValue())) {

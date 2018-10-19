@@ -14,6 +14,8 @@ import service.RouteBlockingService;
 
 @Path("/viproute")
 public class RouteBlockingController {
+	
+	//Find a route that has to be blocked for a VIP to travel through in such a way that the traffic disruption is minimized
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
