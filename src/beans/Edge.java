@@ -1,5 +1,4 @@
 package beans;
-
 public class Edge {
 	//DestinationVertexIndex
 	private Integer destination;
