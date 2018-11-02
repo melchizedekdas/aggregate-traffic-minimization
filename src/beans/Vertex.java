@@ -4,12 +4,12 @@ import java.util.List;
 
 public class Vertex {
 	//Sum of traffic of all incoming edges to this vertex
-	protected Integer totalIncomingTraffic;
+	protected Double totalIncomingTraffic;
 	protected List<Edge> outgoingEdges;
-	public Integer getTotalIncomingTraffic() {
+	public Double getTotalIncomingTraffic() {
 		return totalIncomingTraffic;
 	}
-	public void setTotalIncomingTraffic(Integer totalIncomingTraffic) {
+	public void setTotalIncomingTraffic(Double totalIncomingTraffic) {
 		this.totalIncomingTraffic = totalIncomingTraffic;
 	}
 	public List<Edge> getOutgoingEdges() {
