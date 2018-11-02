@@ -1,7 +1,7 @@
 package beans;
 
 import java.util.List;
-
+ 
 public class Vertex {
 	//Sum of traffic of all incoming edges to this vertex
 	protected Double totalIncomingTraffic;
