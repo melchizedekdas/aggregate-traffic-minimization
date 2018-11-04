@@ -103,6 +103,17 @@ public class RouteBlockingService {
 		}
 		return edgeSequence;
 	}
+	public void generateTotalTraffic(List<Vertex> adjacencyList) {
+		for(Vertex vertex:adjacencyList) {
+			vertex.setTotalIncomingTraffic(0.0);
+		}
+		for(Vertex vertex:adjacencyList) {
+			List<Edge> outgoingEdges = vertex.getOutgoingEdges();
+			for(Edge edge:outgoingEdges) {
+				adjacencyList.get(edge.getDestination()).setTotalIncomingTraffic(adjacencyList.get(edge.getDestination()).getTotalIncomingTraffic()+edge.getTraffic());
+			}
+		}
+	}
 
 
 }

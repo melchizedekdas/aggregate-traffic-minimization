@@ -14,12 +14,23 @@ import service.RouteBlockingService;
 
 @Path("/viproute")
 public class RouteBlockingController {
-	
+
 	//Find a route that has to be blocked for a VIP to travel through in such a way that the traffic disruption is minimized
+	@Path("/withtotaltraffic")
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
-	public List<Edge> vipRoute(RouteBlockingRequest request) {
+	public List<Edge> vipRouteWithTotalTraffic(RouteBlockingRequest request) {
+		return RouteBlockingService.getRouteBlockingService().findOptimalRoute(request.getAdjacencyList(), request.getSource(), request.getDestination());
+	}
+
+	//Find a route that has to be blocked for a VIP to travel through in such a way that the traffic disruption is minimized
+	@Path("/withouttotaltraffic")
+	@POST
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON)
+	public List<Edge> vipRouteWithOutTotalTraffic(RouteBlockingRequest request) {
+		RouteBlockingService.getRouteBlockingService().generateTotalTraffic(request.getAdjacencyList());
 		return RouteBlockingService.getRouteBlockingService().findOptimalRoute(request.getAdjacencyList(), request.getSource(), request.getDestination());
 	}
 }
