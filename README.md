@@ -9,7 +9,7 @@ URL:
 http://localhost:8080/viprouteblocking/map/viproute/withouttotaltraffic
 
 
-Sample JSON POST request:
+Sample JSON POST request for the graph represented by the image:
 {
 	"source":0,
 	"destination":16,
