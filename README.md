@@ -1,5 +1,5 @@
 # aggregate-traffic-minimization
-A heuristic algorithm to find a path to be blocked by Aggregate Traffic Minimization
+A Heuristic Algorithm to Find a Path to be Blocked by Aggregate Traffic Minimization
 
 Steps to execute:
 Host the java web application in a server.
