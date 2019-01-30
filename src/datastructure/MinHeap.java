@@ -6,7 +6,7 @@ import java.util.List;
 import beans.AugmentedVertex;
 
 //Min-heap which facilitates fast heapify after change key operation
-public class MinHeap {
+public class MinHeap implements PriorityQueue{
 	
 	//Size of the heap
 	int size=0;
