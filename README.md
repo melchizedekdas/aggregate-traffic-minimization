@@ -1,5 +1,8 @@
 # aggregate-traffic-minimization
-A Heuristic Algorithm to Find a Path to be Blocked by Aggregate Traffic Minimization
+A Heuristic Algorithm to Find a Path to be Blocked by Minimizing Traffic Disruption
+
+Research paper for this project has been published in the IEEE Discover 2020 International Conference.
+Link to the research paper: https://ieeexplore.ieee.org/document/9278058
 
 Steps to execute:
 Host the java web application in a server.
